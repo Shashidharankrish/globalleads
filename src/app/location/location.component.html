@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-4">
+    <h3>New City</h3>
+    <div class="form-group">
+      <label>City Name</label>
+      <input type="text" class="form-control input-sm" #cityname>
+    </div>
+    <div class="form-group text-center">
+      <button class="btn btn-danger" (click)="savecity(cityname.value)">Save City</button>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <table class="table table-bordered table-hover">
+      <caption class="text-center">
+        <h3>Location List</h3>
+      </caption>
+      <tr>
+        <th>Id</th>
+        <th>City Name</th>
+        <th>City Status</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let row of totalcity">
+        <td>{{row.cityid}}</td>
+        <td>{{row.cityname}}</td>
+        <td>{{row.citystatus}}</td>
+        <td>
+          <select (change)="changeStatus(row.cityid, sts.value)"  #sts>
+            <option value="">Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">In Active</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+

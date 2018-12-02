@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-4">
+        <h3>New Category</h3>
+        <div class="form-group">
+          <label>Category Name</label>
+          <input type="text" class="form-control input-sm" #catname>
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-danger" (click)="savecat(catname.value)">Save Category</button>
+        </div>
+      </div>
+  <div class="col-sm-8">
+    <table class="table table-bordered table-hover">
+      <caption class="text-center">
+        <h3>Category List</h3>
+      </caption>
+      <tr>
+        <th>Id</th>
+        <th>Category Name</th>
+        <th>Status</th>
+        <th>Action</th>
+        
+      </tr>
+      <tr *ngFor="let row of totalcategory">
+        <td>{{row.catid}}</td>
+        <td>{{row.catname}}</td>
+        <td>{{row.catstatus}}</td>
+        <td>
+            <select (change)="changeStatus(row.catid, sts.value)"  #sts>
+              <option value="">Status</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">In Active</option>
+            </select>
+          </td>
+       
+      </tr>
+    </table>
+  </div>
+</div>
+

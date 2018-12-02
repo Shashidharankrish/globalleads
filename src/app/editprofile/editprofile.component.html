@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h3 class="text-center">Edit Profile</h3>{{msg}}
+    <table class="table table-bordered">
+     
+      <tr>
+        <th>Name</th>
+        <td><input type = "text" class="form-control input-sm"value="{{profile.name}}" #name></td>
+      </tr>
+      <tr>
+        <th>Mobile No</th>
+        <td><input type = "text" class="form-control input-sm" value="{{profile.mobile}}" #mobile></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><input type = "text" class="form-control input-sm"value="{{profile.email}}" #email></td>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <td><input type = "text" class="form-control input-sm" value="{{profile.password}}" #password></td>
+      </tr>
+      <tr>
+        <th>Address </th>
+        <td><textarea class="form-control input-sm" #address>{{profile.address}}</textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-center">
+          <button class="btn btn-warning"(click)="updateprofile(name.value,email.value,mobile.value,password.value,address.value)">Update Profile</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-sm-3"></div>
+</div>

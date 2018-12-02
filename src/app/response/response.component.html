@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-bordered table-hover">
+      <caption class="text-center">
+        <h3>Response List</h3>
+      </caption>
+      <tr>
+        <th>Id</th>
+        <th>Full Name</th>
+        <th>Mobile No</th>
+        <th>Email</th>
+        <th width="15%">Message</th>
+        <th>Sent Date</th>
+      </tr>
+      <tr *ngFor="let row of totalresponse">
+        <td>{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.mobile}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.message}}</td>
+        <td>{{row.responsedate}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

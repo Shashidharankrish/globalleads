@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-sm-3 well">
+    <h3> My Update</h3>
+
+    <div class="form-group">
+      <label>Headline</label>
+      <input type="text" class="form-control input-sm" #title>
+    </div>
+
+    <div class="form-group">
+        <label>Details</label>
+        <textarea class="form-control" #details></textarea>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-primary" (click)="savepost(title.value, details.value)">Save Post</button>
+    </div>
+
+  </div>
+  <div class="col-sm-9">
+    <h3> Current Updates --------
+        <button class="btn btn-danger btn-sm"(click)="mypost()">View My Posts</button>
+        <button class="btn btn-success btn-sm"(click)="allupdates()">View All Posts</button>
+    </h3>
+    <div class="row" *ngFor="let row of newupdate">
+      <div class="col-sm-3">
+        <img src="assets/image/{{row.image}}" class="img-responsive img-circle" height="100px" width="100px">
+      </div>
+      <div class="col-sm-9">
+        <h4>{{row.title}}</h4>
+        <p>{{row.description}}</p>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3"> Posted By: <u>{{row.postedby}}</u></div>
+          <div class="col-sm-6"> Posted Date: <u>{{row.postdate}}</u></div>
+          <div class="col-sm-3"> Total View: <i>{{row.maxread}}</i></div>
+        </div>
+        <hr>
+      </div>
+      
+    </div>
+
+  </div>
+</div>

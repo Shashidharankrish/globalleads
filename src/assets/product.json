@@ -1,0 +1,17 @@
+[
+   {"name":"job 1", "price":"100", "details":"good", "loc":"0", "cat":"0", "photo":"1.jpg"},
+   {"name":"job 2", "price":"100", "details":"good", "loc":"1", "cat":"0", "photo":"2.jpg"},  
+   {"name":"Mobile 1", "price":"100", "details":"good", "loc":"1", "cat":"2", "photo":"3.jpg"},
+   {"name":"Mobile 2", "price":"100", "details":"good", "loc":"1", "cat":"2", "photo":"4.jpg"},
+   {"name":"Electronics 1", "price":"100", "details":"good", "loc":"0", "cat":"1", "photo":"1.jpg"},
+   {"name":"Electronics 2", "price":"100", "details":"good", "loc":"1", "cat":"1", "photo":"4.jpg"},
+   {"name":"Pet 1", "price":"100", "details":"good", "loc":"1", "cat":"3", "photo":"2.jpg"},
+   {"name":"Pet 2", "price":"100", "details":"good", "loc":"1", "cat":"3", "photo":"3.jpg"}
+   
+
+
+   
+
+
+
+]

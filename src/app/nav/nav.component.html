@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="dashboard">Global Leads</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          
+          <li><a routerLink="response">All Responses</a></li>
+          <li><a routerLink="contact">All Contacts</a></li>
+          <li><a routerLink="location">Location</a></li>
+          <li><a routerLink="category"> Category</a></li>
+          <li><a routerLink="products">Product</a></li>
+          <li><a routerLink="client">Manage Client</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> Account <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+            <li> <a routerLink="viewprofile">View Profile</a></li>
+            <li> <a routerLink="editprofile">Edit Profile</a></li>
+            <li> <a routerLink="mycontact">My Contact</a></li>
+            <li> <a routerLink="updates">Updates</a></li>
+           </ul>
+          </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container" style="min-height:555px;">
+      <router-outlet></router-outlet>
+  </div>
+  <div class="container-fluid">
+      <div class="row footer">
+          <div class="col-sm-12 text-center">
+              <h3>Global Leads</h3>
+              <p>This is developed using angular 6 with PHP mySql</p>
+          </div>
+      </div>
+  </div>

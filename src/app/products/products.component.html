@@ -1,0 +1,75 @@
+
+<br><br>
+<div class="row">
+  <div class="col-sm-3 well">
+    <h3>New Product</h3>
+    <i>{{msg}}</i>
+    <div class="form-group">
+      <label>Product</label>
+      <input type="text" class="form-control input-sm" #name>
+    </div>
+
+    <div class="form-group">
+        <label>Product Details</label>
+        <textarea  class="form-control" #details></textarea>
+      </div>
+
+      <div class="form-group">
+          <label>Product Price</label>
+          <input type="number" class="form-control input-sm" #price>
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+          <select class="form-control input-sm" #cat>
+            <option value="">Choose</option>
+            <option *ngFor="let mycat of allcat" value="{{mycat.catid}}">{{mycat.catname}}</option>
+          </select>
+          </div>
+
+          <div class="form-group">
+              <button class="btn  btn-success" (click)="saveproducts(name.value,details.value,price.value,cat.value)">Save Product</button>
+            </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+          <select class="form-control input-sm" (change)="getproduct(abc.value)" #abc>
+              <option value="">Search by Category</option>
+              <option *ngFor="let mycat of allcat" value="{{mycat.catid}}">{{mycat.catname}}</option>
+            </select>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <br>
+    
+    <table class="table table-bordered table-hover">
+      <caption><p class="text-center">{{proloading}}</p></caption>
+      <thead>
+        <tr class="danger">
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Details</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of allproduct">
+          <td>{{row.name}}</td>
+          <td>{{row.price}}</td>
+          <td>{{row.details}}</td>
+          <td>{{row.status}}</td>
+          <td>
+            <select (change)="changeStatus(row.id, sts.value, row.catid)"  #sts>
+              <option value="">Status</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">In Active</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

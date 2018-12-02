@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h3> Manage Clients </h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4 form-group" *ngFor="let row of allclient; let i=index;">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+    <h5>{{row.name}}</h5>
+    <p>Contact Person : {{row.contactperson}}</p>
+    <p>E-Mail : {{row.email}}</p>
+    <p>Mobile No : {{row.mobile}}</p>
+    <div class="text-center">
+      <button class="btn btn-warning btn-sm" (click)="showdata(i)" data-toggle="modal" data-target="#datamodal">View More</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="modal fade" id="datamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-md" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel">{{name}}</h4>
+    </div>
+    <div class="modal-body">
+         <div [innerHTML]="clientdata"></div>
+         <br>
+         <ul class="pager">
+            <li><a href="javascript:" (click)="predata()"> << Previous </a></li>
+            <li><a href="javascript:" (click)="nextdata()">Next >></a></li>
+         </ul>
+    </div>
+  </div>
+  </div>
+</div>
